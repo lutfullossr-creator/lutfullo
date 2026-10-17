@@ -1,0 +1,15 @@
+/music.m4a
+  Cache-Control: public, max-age=31536000, immutable
+  Accept-Ranges: bytes
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/og-image.png
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
