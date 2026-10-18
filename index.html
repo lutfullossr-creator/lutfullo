@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,6 +7,7 @@
 <title>Lutfullo Developer — Mobile Web &amp; App Developer | Portfolio</title>
 <meta name="description" content="Lutfullo Developer — mobil va web dasturchi. NanoGram, Edi va AI loyihalar. Loyihalarni ko'ring va APK yuklab oling.">
 <meta name="robots" content="index, follow">
+<meta name="author" content="Lutfullo Developer">
 <meta name="theme-color" content="#020806">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +26,7 @@
 <meta name="twitter:description" content="NanoGram, Edi and AI projects built entirely on a phone.">
 <meta name="twitter:image" content="https://lutfullo.pages.dev/og-image.png">
 <link rel="canonical" href="https://lutfullo.pages.dev/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lutfullo","alternateName":"Lutfullo Developer","jobTitle":"Mobile web & app developer","sameAs":["https://t.me/Lutfullosst","https://instagram.com/lutfullo.13l","https://github.com/lutfullossr-creator"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://lutfullo.pages.dev/#website","url":"https://lutfullo.pages.dev/","name":"Lutfullo Developer","alternateName":["Lutfullo","Lutfullo Developer Portfolio"],"inLanguage":["uz","tg","ru","en"],"publisher":{"@id":"https://lutfullo.pages.dev/#person"}},{"@type":"Person","@id":"https://lutfullo.pages.dev/#person","name":"Lutfullo","alternateName":"Lutfullo Developer","url":"https://lutfullo.pages.dev/","image":"https://lutfullo.pages.dev/og-image.png","jobTitle":"Mobile web & app developer","description":"Lutfullo Developer builds mobile apps, web apps and Minecraft addons entirely on a phone: NanoGram, Edi and AI projects.","sameAs":["https://t.me/Lutfullosst","https://instagram.com/lutfullo.13l","https://github.com/lutfullossr-creator"]}]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap">
 <script>
@@ -132,6 +133,12 @@ header.bar .sub .wrap{display:flex;justify-content:flex-start;gap:6px;padding-to
 .music[aria-pressed="true"] .eq i:nth-child(2){animation-delay:.25s}
 .music[aria-pressed="true"] .eq i:nth-child(3){animation-delay:.5s}
 @keyframes eq{to{height:14px}}
+.hero h1#name{font-size:clamp(44px,14vw,104px);line-height:1.02;letter-spacing:-.02em}
+#name .dev{display:block;margin:0;font-size:1em;font-weight:700;color:var(--text);text-shadow:none}
+.greet{margin:0 0 10px;font:600 clamp(18px,5vw,28px)/1.3 "JetBrains Mono",ui-monospace,monospace;color:var(--accent)}
+.greet::before{content:"> ";color:var(--muted)}
+#boot #bootTxt{font-size:clamp(17px,4.8vw,28px);line-height:1.75}
+#boot #bootGate b{font-size:clamp(40px,13vw,96px)}
 @media (prefers-reduced-motion: reduce){#term div:last-child::after,:root[data-theme="dark"] #name::before,:root[data-theme="dark"] #name::after,.music[aria-pressed="true"] .eq i{animation:none}#rain{display:none}}
 
 [hidden]{display:none!important}
@@ -232,13 +239,43 @@ footer{font-size:15px}
 :root[data-theme="dark"] body::before{content:"";position:fixed;left:0;right:0;top:-140px;height:140px;z-index:4;pointer-events:none;background:linear-gradient(transparent,rgba(0,255,156,.07),transparent);animation:beam 8s linear infinite}
 @keyframes beam{to{transform:translateY(calc(100vh + 280px))}}
 html.fx-off body::before{display:none!important}
-#rain{opacity:.3}
-#crash{position:fixed;inset:0;z-index:200;display:none;pointer-events:none;background:rgba(0,0,0,.5);place-items:center}
+#rain{opacity:.3;transition:opacity .6s}
+#crash{position:fixed;inset:0;z-index:200;display:none;pointer-events:auto;cursor:pointer;background:#04060a;place-items:center}
+#crash::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,255,156,.05) 0 1px,transparent 1px 3px)}
 html.crash #crash{display:grid}
 html.crash main,html.crash header.bar{animation:shk .1s steps(2) infinite;filter:hue-rotate(70deg) contrast(1.5) saturate(1.6)}
 @keyframes shk{0%{transform:translate(-5px,2px)}50%{transform:translate(6px,-3px)}100%{transform:translate(-3px,-2px)}}
 #crash .cbox{background:#000;border:2px solid #ff2d6f;color:#00ff9c;padding:18px 20px;width:min(92vw,520px);font:600 15px/1.8 "JetBrains Mono",ui-monospace,monospace;box-shadow:0 0 40px rgba(255,45,111,.5)}
-#crash pre{margin:0;font:inherit;white-space:pre-wrap;min-height:11em}
+#crash pre{margin:0;font:inherit;white-space:pre-wrap;min-height:12em;text-shadow:0 0 8px rgba(0,255,156,.5)}
+#crash .chd{color:#ff2d6f;font-weight:700;font-size:18px;margin-bottom:10px;text-shadow:0 0 14px rgba(255,45,111,.8)}
+#crash .cbar{height:10px;border:1px solid #1b5a3b;margin-top:10px}
+#crash .cbar i{display:block;height:100%;width:0;background:#00ff9c;box-shadow:0 0 10px #00ff9c}
+#crash .cpct{text-align:right;font-size:12px;color:#78ad8e;margin-top:2px}
+#crash .chint{text-align:center;font-size:11px;color:#4f7a62;margin-top:8px}
+#crash.hot .cbox{animation:hot .22s steps(2) 4}
+@keyframes hot{50%{background:#2a0010;border-color:#fff}}
+#crt{position:fixed;inset:0;z-index:300;display:none;pointer-events:none}
+#crt i{position:absolute;left:0;width:100%;background:#000;display:block}
+#crt .ct{top:0;height:50.2%;transform:translateY(-100%)}
+#crt .cb{bottom:0;height:50.2%;transform:translateY(100%)}
+#crt .cl{top:50%;height:3px;margin-top:-1.5px;background:#d9fff0;box-shadow:0 0 18px 6px rgba(0,255,156,.8);opacity:0}
+#crt.crt-off,#crt.crt-black,#crt.crt-on{display:block}
+#crt.crt-off .ct{animation:ctIn .3s ease-in forwards}
+#crt.crt-off .cb{animation:cbIn .3s ease-in forwards}
+#crt.crt-off .cl{animation:lineOff .32s .28s forwards}
+#crt.crt-black .ct,#crt.crt-black .cb{transform:none}
+#crt.crt-on .ct{animation:ctOut .42s .08s ease-out both}
+#crt.crt-on .cb{animation:cbOut .42s .08s ease-out both}
+#crt.crt-on .cl{animation:lineOn .45s forwards}
+@keyframes ctIn{from{transform:translateY(-100%)}to{transform:none}}
+@keyframes cbIn{from{transform:translateY(100%)}to{transform:none}}
+@keyframes ctOut{from{transform:none}to{transform:translateY(-100%)}}
+@keyframes cbOut{from{transform:none}to{transform:translateY(100%)}}
+@keyframes lineOff{0%{opacity:1;transform:scaleX(1)}70%{opacity:1;transform:scaleX(.03)}100%{opacity:0;transform:scaleX(0)}}
+@keyframes lineOn{0%{opacity:1;transform:scaleX(0)}35%{opacity:1;transform:scaleX(1)}100%{opacity:0;transform:scaleX(1)}}
+#flash{position:fixed;inset:0;z-index:290;background:#d9fff0;opacity:0;pointer-events:none}
+#flash.go{animation:fl .38s ease-out}
+@keyframes fl{0%{opacity:.75}100%{opacity:0}}
 #crash .tear{position:absolute;left:0;width:100%;height:9%;background:rgba(0,229,255,.16);animation:tear .3s steps(4) infinite}
 #crash .t1{top:12%}#crash .t2{top:46%;background:rgba(255,45,111,.16);animation-duration:.22s}#crash .t3{top:78%}
 @keyframes tear{0%{transform:translateX(-30px)}50%{transform:translateX(40px)}100%{transform:translateX(-12px)}}
@@ -261,7 +298,17 @@ html.crash main,html.crash header.bar{animation:shk .1s steps(2) infinite;filter
 html.freeze,html.freeze *{cursor:wait!important}
 html.freeze body{pointer-events:none}
 html.freeze main,html.freeze header.bar{filter:grayscale(1) contrast(1.2) brightness(.8)}
-#nr{position:fixed;left:50%;top:36%;transform:translateX(-50%);z-index:210;display:none;background:#0d0d0d;border:1px solid #888;color:#ddd;padding:12px 18px;font:600 14px "JetBrains Mono",ui-monospace,monospace;white-space:nowrap;max-width:94vw}
+#nr{position:fixed;left:50%;top:32%;transform:translateX(-50%);z-index:210;display:none;background:#111;border:1px solid #777;color:#ddd;width:min(92vw,370px);font:600 13px "JetBrains Mono",ui-monospace,monospace;box-shadow:0 10px 50px rgba(0,0,0,.8)}
+#nr .nrh{display:flex;justify-content:space-between;background:#2b2b2b;padding:6px 10px;font-size:12px;color:#bbb}
+#nr .nrb{display:flex;gap:14px;align-items:center;padding:16px}
+#nr .spin{flex:none;width:28px;height:28px;border:3px solid #444;border-top-color:#ddd;border-radius:50%;animation:spn .9s linear infinite}
+#nr .nrp{height:8px;background:#333;margin:10px 0 6px;position:relative;overflow:hidden}
+#nr .nrp i{position:absolute;left:0;top:0;height:100%;width:32%;background:#4da3ff;animation:mq 1.4s linear infinite}
+#nr small{color:#888;font-size:11px;font-weight:400}
+@keyframes spn{to{transform:rotate(360deg)}}
+@keyframes mq{from{left:-35%}to{left:100%}}
+html.freeze *{animation-play-state:paused!important}
+html.freeze #nr,html.freeze #nr *{animation-play-state:running!important}
 html.freeze #nr{display:block}
 #nr .dots::after{content:"";animation:dt 1s steps(4) infinite}
 @keyframes dt{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
@@ -275,9 +322,11 @@ html.rgb main,html.rgb header.bar{animation:shk .08s steps(2) infinite;filter:dr
 <noscript><p style="padding:20px;color:#c9f7d8;background:#020806">Lutfullo Developer — mobile web &amp; app developer. Projects: <a href="https://nanogrampro.netlify.app/">NanoGram</a>, Edi. Please enable JavaScript to see the full portfolio.</p></noscript>
 <canvas id="rain" aria-hidden="true"></canvas>
 <div id="prog"></div>
-<div id="crash" aria-hidden="true"><i class="tear t1"></i><i class="tear t2"></i><i class="tear t3"></i><div class="cbox"><pre id="cTxt"></pre></div></div>
+<div id="crash" aria-hidden="true"><i class="tear t1"></i><i class="tear t2"></i><i class="tear t3"></i><div class="cbox"><div class="chd">!! KERNEL PANIC !!</div><pre id="cTxt"></pre><div class="cbar"><i id="cFill"></i></div><div class="cpct" id="cPct">0%</div><div class="chint">tap to skip</div></div></div>
+<div id="crt" aria-hidden="true"><i class="ct"></i><i class="cb"></i><i class="cl"></i></div>
+<div id="flash" aria-hidden="true"></div>
 <div id="toast" role="status"></div>
-<div id="nr" aria-hidden="true">⚠ lutfullo.exe — not responding<span class="dots"></span></div>
+<div id="nr" aria-hidden="true"><div class="nrh"><span>lutfullo.exe</span><b>&times;</b></div><div class="nrb"><span class="spin"></span><div><div><span id="nrM">lutfullo.exe is not responding</span><span class="dots"></span></div><div class="nrp"><i></i></div><small id="nrS">waiting for response &middot; 0.0s</small></div></div></div>
 <div id="boot" aria-hidden="true"><div id="bootGate"><b>LUTFULLO<br>DEVELOPER</b><span>[ TAP TO ENTER ]</span></div><pre id="bootTxt" hidden></pre><i id="bootBar"></i></div>
 <audio id="bgm" loop preload="none"><source src="music.m4a" type="audio/mp4"></audio>
 <button id="fx" class="fx" type="button" aria-pressed="true" aria-label="Effects">FX</button>
@@ -288,7 +337,7 @@ html.rgb main,html.rgb header.bar{animation:shk .08s steps(2) infinite;filter:dr
     <span class="logo">Lutfullo<small>Developer</small></span>
     <div class="right">
       <div class="langs" role="group" aria-label="Language">
-        <button data-lang="uz">UZ</button><button data-lang="tg">TJ</button><button data-lang="ru">RU</button><button data-lang="en">EN</button>
+        <button data-lang="en">EN</button><button data-lang="uz">UZ</button><button data-lang="tg">TJ</button><button data-lang="ru">RU</button>
       </div>
       <button class="theme" id="theme" type="button">☾</button>
     </div>
@@ -299,7 +348,8 @@ html.rgb main,html.rgb header.bar{animation:shk .08s steps(2) infinite;filter:dr
 <main class="wrap">
   <div class="hero">
     <div>
-      <h1 id="name">Lutfullo</h1>
+      <p class="greet" data-i="greet"></p>
+      <h1 id="name">Lutfullo<span class="dev"> Developer</span></h1>
       <div class="brandsub">Developer</div>
       <p class="role" data-i="role"></p>
       <div class="term" aria-hidden="true"><div class="tbar"><i></i><i></i><i></i><span>lutfullo@phone:~</span></div><div id="term"></div></div>
@@ -385,7 +435,7 @@ var CONFIG = {
 
 var L = {
 uz:{
-  role:"Mobil dasturchi. Telefondan turib ilova, sayt va sun'iy intellekt loyihalarini yarataman.",
+  greet:"Salom, men", role:"Mobil dasturchi. Telefondan turib ilova, sayt va sun'iy intellekt loyihalarini yarataman.",
   age:function(a){return a+" yosh"}, loc:"Tojikiston", phone:"Faqat telefondan kodlayman",
   ctaP:"Loyihalarim", ctaC:"Aloqa",
   nav:["Men haqimda","Loyihalar","Yutuqlar","Texnologiyalar","Qiziqishlar","Aloqa"], stats:[["2","APK ilova: NanoGram va Edi"],["3","tilli ijtimoiy tarmoq"],["0","kompyuter, hammasi telefonda"]], copy:"Nusxalash", copied:"Nusxalandi", themeL:"Mavzuni almashtirish",
@@ -423,7 +473,7 @@ uz:{
   foot:"© 2026 Lutfullo"
 },
 tg:{
-  role:"Барномасози мобилӣ. Аз телефон барнома, сайт ва лоиҳаҳои ҳуши сунъӣ месозам.",
+  greet:"Салом, ман", role:"Барномасози мобилӣ. Аз телефон барнома, сайт ва лоиҳаҳои ҳуши сунъӣ месозам.",
   age:function(a){return a+" сола"}, loc:"Тоҷикистон", phone:"Танҳо аз телефон барнома менависам",
   ctaP:"Лоиҳаҳо", ctaC:"Тамос",
   nav:["Дар бораи ман","Лоиҳаҳо","Дастовардҳо","Технологияҳо","Шавқҳо","Тамос"], stats:[["2","барномаи APK: NanoGram ва Edi"],["3","забони шабакаи иҷтимоӣ"],["0","компютер, ҳама аз телефон"]], copy:"Нусха", copied:"Нусха шуд", themeL:"Иваз кардани мавзӯъ",
@@ -461,7 +511,7 @@ tg:{
   foot:"© 2026 Lutfullo"
 },
 ru:{
-  role:"Мобильный разработчик. Создаю приложения, сайты и ИИ-проекты прямо с телефона.",
+  greet:"Привет, я", role:"Мобильный разработчик. Создаю приложения, сайты и ИИ-проекты прямо с телефона.",
   age:function(a){return a+" лет"}, loc:"Таджикистан", phone:"Пишу код только с телефона",
   ctaP:"Проекты", ctaC:"Контакты",
   nav:["Обо мне","Проекты","Достижения","Технологии","Интересы","Контакты"], stats:[["2","APK-приложения: NanoGram и Edi"],["3","языка в соцсети"],["0","компьютеров, всё с телефона"]], copy:"Копировать", copied:"Скопировано", themeL:"Сменить тему",
@@ -499,7 +549,7 @@ ru:{
   foot:"© 2026 Lutfullo"
 },
 en:{
-  role:"Mobile developer. I build apps, websites and AI projects straight from my phone.",
+  greet:"Hello, I'm", role:"Mobile developer. I build apps, websites and AI projects straight from my phone.",
   age:function(a){return a+" years old"}, loc:"Tajikistan", phone:"I code only on my phone",
   ctaP:"Projects", ctaC:"Contact",
   nav:["About","Projects","Achievements","Tech","Interests","Contact"], stats:[["2","APK apps: NanoGram and Edi"],["3","languages in my social app"],["0","computers, all on a phone"]], copy:"Copy", copied:"Copied", themeL:"Toggle theme",
@@ -810,26 +860,94 @@ function buildTerm(d){
 }
 
 var fxOn = true; try{ fxOn = localStorage.getItem("fx") !== "0"; }catch(e){}
-var cv = document.getElementById("rain"), cx = cv.getContext("2d"), fs = 16, drops = [], lastT = 0;
-var glyphs = "01アイウエオカキクケコサシスセソ<>/{}$#".split("");
-function sizeRain(){
-  cv.width = window.innerWidth; cv.height = window.innerHeight;
-  drops = []; for (var i = 0; i < Math.ceil(cv.width / fs); i++) drops[i] = Math.random() * -40;
+var cv = document.getElementById("rain"), cx = cv.getContext("2d");
+var bgW = 0, bgH = 0, bgFs = 16, bgCol = [], bgLast = 0, bgScrollT = 0;
+var bgKat = "アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789".split("");
+var bgSets = [bgKat, "01".split(""), "0123456789ABCDEF".split("")];
+var bgWords = ["ROOT", "SUDO", "NANOGRAM", "EDI", "LUTFULLO", "DEVELOPER", "KERNEL", "PYTHON", "FIREBASE", "NETLIFY", "TERMUX", "ACODE", "GITHUB"];
+var bgEvs = [{t: ["LUTFULLO"], h: 150}, {t: ["DEVELOPER"], h: 185}, {t: ["ACCESS", "DENIED"], h: 0}, {t: ["ACCESS", "GRANTED"], h: 150}, {t: ["NANOGRAM"], h: 185}, {t: ["SYSTEM", "ONLINE"], h: 150}];
+var bgEv = null, bgEvI = 0, bgNext = 0, bgCells = [];
+function bgPick(a){ return a[Math.random() * a.length | 0]; }
+function bgHsl(h, l, a){ return "hsla(" + h + ",100%," + l + "%," + a + ")"; }
+
+/* every column has its own character set, speed, direction and colour; some carry real words */
+function bgNewCol(i, init){
+  var c = bgCol[i] || (bgCol[i] = {}), rows = Math.ceil(bgH / bgFs);
+  c.up = Math.random() < .12;
+  c.spd = .3 + Math.random() * .9;
+  c.set = Math.random() < .7 ? 0 : (Math.random() < .5 ? 1 : 2);
+  c.cy = Math.random() < .18;
+  c.word = (!c.up && Math.random() < .14) ? bgPick(bgWords) : ""; c.wi = 0;
+  c.d = c.up ? rows + Math.random() * 20 : -Math.random() * (init ? rows : 20);
+  c.g = "";
 }
-function rain(t){
-  requestAnimationFrame(rain);
-  if (t - lastT < 55 || document.hidden || !fxOn || /\b(crash|freeze)\b/.test(document.documentElement.className) || document.documentElement.getAttribute("data-theme") !== "dark") return;
-  lastT = t;
-  cx.fillStyle = "rgba(2,8,6,.12)"; cx.fillRect(0, 0, cv.width, cv.height);
-  cx.fillStyle = "#00ff9c"; cx.font = fs + "px monospace";
-  for (var i = 0; i < drops.length; i++){
-    cx.fillText(glyphs[Math.floor(Math.random() * glyphs.length)], i * fs, drops[i] * fs);
-    if (drops[i] * fs > cv.height && Math.random() > .975) drops[i] = 0;
-    drops[i]++;
+function sizeBG(){
+  bgW = cv.width = window.innerWidth; bgH = cv.height = window.innerHeight;
+  bgCol = []; for (var i = 0, n = Math.ceil(bgW / bgFs); i < n; i++) bgNewCol(i, true);
+  bgEv = null; cv.style.opacity = "";
+  cx.fillStyle = "#020806"; cx.fillRect(0, 0, bgW, bgH);
+}
+
+/* periodic event: the rain spells a word / message for a few seconds */
+function bgBuild(lines){
+  var s = 8, mw = Math.ceil(bgW / s), mh = Math.ceil(bgH / s), oc = document.createElement("canvas");
+  oc.width = mw; oc.height = mh;
+  var o = oc.getContext("2d"), cells = [], wmax = 1;
+  o.fillStyle = "#fff"; o.textAlign = "center"; o.textBaseline = "middle"; o.font = "700 100px monospace";
+  lines.forEach(function(l){ wmax = Math.max(wmax, o.measureText(l).width); });
+  var fsz = Math.min(Math.floor(100 * mw * .88 / wmax), Math.floor(mw * .6)), lh = fsz * 1.15;
+  o.font = "700 " + fsz + "px monospace";
+  var y0 = mh * .36 - (lines.length - 1) * lh / 2;
+  lines.forEach(function(l, k){ o.fillText(l, mw / 2, y0 + k * lh); });
+  var d = o.getImageData(0, 0, mw, mh).data;
+  for (var y = 0; y < mh; y++) for (var x = 0; x < mw; x++) if (d[(y * mw + x) * 4 + 3] > 128) cells.push(x * s, y * s);
+  return cells;
+}
+function bgEvent(t){
+  if (!bgNext){ bgNext = t + 5000; return; }
+  if (!bgEv){
+    if (t < bgNext) return;
+    var e = bgEvs[bgEvI++ % bgEvs.length];
+    bgEv = {h: e.h, s: t}; bgCells = bgBuild(e.t); cv.style.opacity = ".62";
+    return;
   }
+  var el = t - bgEv.s, D = 3600;
+  if (el > D){ bgEv = null; bgNext = t + 15000 + Math.random() * 6000; cv.style.opacity = ""; return; }
+  var a = Math.min(1, el / 500, (D - el) / 900);
+  cx.font = "9px monospace"; cx.fillStyle = bgHsl(bgEv.h, 78, a);
+  for (var i = 0; i < bgCells.length; i += 2) cx.fillText(Math.random() < .5 ? "0" : "1", bgCells[i], bgCells[i + 1] + 8);
+}
+
+function drawRain(t){
+  cx.fillStyle = "rgba(2,8,6,.1)"; cx.fillRect(0, 0, bgW, bgH);
+  cx.font = bgFs + "px monospace";
+  var rows = Math.ceil(bgH / bgFs), base = bgEv ? bgEv.h : Math.round(150 + 22 * Math.sin(t / 12000));
+  for (var i = 0; i < bgCol.length; i++){
+    var c = bgCol[i], prev = Math.floor(c.d);
+    c.d += c.up ? -c.spd : c.spd;
+    var row = Math.floor(c.d); if (row === prev) continue;
+    var h = (c.cy && !bgEv) ? 185 : base, behind = c.up ? row + 1 : row - 1;
+    if (c.g && behind >= 0 && behind < rows){ cx.fillStyle = bgHsl(h, 50, .8); cx.fillText(c.g, i * bgFs, behind * bgFs); }
+    if (row >= 0 && row < rows){
+      c.g = (c.word && c.wi < c.word.length) ? c.word.charAt(c.wi++) : bgPick(bgSets[c.set]);
+      cx.fillStyle = bgHsl(h, 92, 1); cx.fillText(c.g, i * bgFs, row * bgFs);
+    }
+    if (c.up ? (row < -3 && Math.random() > .97) : (row > rows + 1 && Math.random() > .97)) bgNewCol(i, false);
+  }
+  bgEvent(t);
+}
+function bgActive(){
+  return !document.hidden && fxOn && Date.now() - bgScrollT > 150 && !/\b(crash|freeze)\b/.test(document.documentElement.className) && document.documentElement.getAttribute("data-theme") === "dark";
+}
+function bgLoop(t){
+  requestAnimationFrame(bgLoop);
+  if (t - bgLast < 45 || !bgActive()) return;   // ~22 fps, paused while scrolling
+  bgLast = t; drawRain(t);
 }
 if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)){
-  sizeRain(); window.addEventListener("resize", sizeRain); requestAnimationFrame(rain);
+  sizeBG(); window.addEventListener("resize", sizeBG);
+  window.addEventListener("scroll", function(){ bgScrollT = Date.now(); }, {passive: true});
+  requestAnimationFrame(bgLoop);
 }
 
 /* Background music: ON by default (the browser only allows sound after the first tap) */
@@ -858,13 +976,26 @@ document.addEventListener("visibilitychange", function(){
   function off(){ evs.forEach(function(e){ document.removeEventListener(e, firstTap, true); }); }
   function firstTap(e){
     if (started || userSet){ off(); return; }
+    if (document.getElementById("boot")) return;   // intro running: keep the typing sounds clean
     if (e.target && e.target.closest && e.target.closest("#music")) return;
     setMusic(true);
   }
   evs.forEach(function(e){ document.addEventListener(e, firstTap, true); });
-  var pr = bgm.play();                      // works only where autoplay is allowed
-  if (pr && pr.then) pr.then(function(){ musicUI(true); }, function(){});
+  if (!document.getElementById("boot")){
+    var pr = bgm.play();                    // works only where autoplay is allowed
+    if (pr && pr.then) pr.then(function(){ musicUI(true); }, function(){});
+  }
 })();
+
+window.__afterBoot = function(){
+  if (userSet || started) return;
+  try{ bgm.volume = 0; }catch(e){}
+  setMusic(true);
+  var v = 0, iv = setInterval(function(){
+    v += .05; if (v >= 1){ v = 1; clearInterval(iv); }
+    try{ bgm.volume = v; }catch(e){}
+  }, 120);
+};
 
 var topB = document.getElementById("top");
 window.addEventListener("scroll", function(){ topB.hidden = window.scrollY < 600; }, {passive: true});
@@ -882,7 +1013,7 @@ tb.addEventListener("click", function(){
 setIcon();
 var saved = null;
 try{ saved = localStorage.getItem("lang"); }catch(e){}
-render(saved && L[saved] ? saved : detectLang());
+render(saved && L[saved] ? saved : "en");
 document.getElementById("shareBtn").addEventListener("click", sharePage);
 document.getElementById("printBtn").addEventListener("click", function(){ window.print(); });
 document.getElementById("cfSend").addEventListener("click", function(){
@@ -958,8 +1089,8 @@ var SFX = {
   key: function(big){
     if (!this.on()) return;
     try{ var f = (big ? 1700 : 2500) + Math.random() * 800;
-      this.noise(.035, f, f, 1.1, big ? .14 : .09);
-      this.tone("sine", (big ? 150 : 190) + Math.random() * 40, 65, .07, big ? .12 : .07);
+      this.noise(.022, f, f, 1.4, big ? .16 : .11);
+      this.tone("sine", (big ? 150 : 190) + Math.random() * 40, 65, .045, big ? .13 : .08);
     }catch(e){}
   },
   chime: function(f, delay){ if (!this.on()) return; try{ this.tone("sine", f, f, .9, .07, delay || 0); }catch(e){} },
@@ -985,14 +1116,16 @@ var SFX = {
   var bt = document.getElementById("boot"); if (!bt) return;
   var ok = document.documentElement.getAttribute("data-theme") === "dark" && !(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
   var seen = null; try{ seen = sessionStorage.getItem("boot"); }catch(e){}
-  if (!ok || seen){ bt.parentNode.removeChild(bt); return; }
+  if (!ok || seen){ bt.parentNode.removeChild(bt); if (window.__afterBoot) window.__afterBoot(); return; }
   var script = [
-    ["$ ./start_portfolio.sh", "c0"],
-    ["> loading modules ........ [OK]", "c2"],
-    ["const dev = {", "c1"],
-    ["  name: \"Lutfullo\",", "c1"],
-    ["  brand: \"Developer\"", "c1"],
-    ["};", "c1"],
+    ["$ ./boot.sh", "c0"],
+    ["> mounting /dev/phone ..... [OK]", "c0"],
+    ["> loading nanogram, edi, addons .. [OK]", "c0"],
+    ["> firewall ..... [ACTIVE]", "c0"],
+    ["", "c0"],
+    ["Hello, I'm Lutfullo.", "c2"],
+    ["I'm a Developer.", "c1"],
+    ["", "c0"],
     ["> access granted_", "c0"]
   ];
   var gate = document.getElementById("bootGate"), pre = document.getElementById("bootTxt"), bar = document.getElementById("bootBar");
@@ -1006,6 +1139,7 @@ var SFX = {
     if (closed) return; closed = true; bar.style.width = "100%"; bt.style.opacity = "0";
     setTimeout(function(){ if (bt.parentNode) bt.parentNode.removeChild(bt); }, 900);
     try{ sessionStorage.setItem("boot", "1"); }catch(e){}
+    if (window.__afterBoot) window.__afterBoot();
   }
   function step(){
     if (closed) return;
@@ -1017,7 +1151,7 @@ var SFX = {
     if (ci < ln.length){
       var ch = ln.charAt(ci++); cur.textContent += ch;
       if (ch !== " ") key(false);
-      setTimeout(step, 16 + Math.random() * 16);
+      setTimeout(step, 17 + Math.random() * 12);
     } else {
       pre.appendChild(document.createTextNode("\n")); li++; ci = 0;
       key(true); setTimeout(step, 110 + Math.random() * 90);
@@ -1057,18 +1191,116 @@ var evBusy = false, H = document.documentElement;
 function $(id){ return document.getElementById(id); }
 function sfxIf(n){ if (fxOn) SFX[n](); }
 function endEv(ms, fn){ setTimeout(function(){ fn(); evBusy = false; }, ms); }
+
+/* ===== v5: richer sound for the fake freeze / crash ===== */
+SFX.stutter = function(n){
+  if (!this.on()) return;
+  try{ for (var i = 0; i < (n || 6); i++){ this.tone("sawtooth", 150 - i * 9, 95 - i * 5, .05, .07, i * .06); this.noise(.04, 2600, 700, 1.2, .1, "bandpass", i * .06); } }catch(e){}
+};
+SFX.cut = function(){ if (!this.on()) return; try{ this.tone("square", 900, 900, .07, .05); this.noise(.18, 6500, 6500, .6, .06); }catch(e){} };
+SFX.down = function(){
+  if (!this.on()) return;
+  try{ this.tone("sine", 950, 45, .55, .12); this.tone("sine", 75, 28, .85, .17); this.noise(.4, 7000, 250, .6, .09, "bandpass"); }catch(e){}
+};
+SFX.tick = function(){ if (!this.on()) return; try{ this.noise(.012, 5000, 5000, 2, .13); }catch(e){} };
+SFX.beep = function(f, d){ if (!this.on()) return; try{ this.tone("square", f || 1000, f || 1000, d || .14, .05); }catch(e){} };
+SFX.powerup = function(){
+  if (!this.on()) return;
+  try{ this.tone("sine", 50, 1100, .6, .1); this.tone("triangle", 200, 2400, .5, .035); this.noise(.5, 400, 9000, .7, .06, "bandpass"); this.chime(784, .32); this.chime(1175, .46); }catch(e){}
+};
+function sfxA(n, a, b){ if (fxOn && SFX[n]) SFX[n](a, b); }
+var bgmCutOn = false;
+function bgmCut(){ try{ if (typeof bgm !== "undefined" && !bgm.paused){ bgmCutOn = true; bgm.pause(); } }catch(e){} }
+function bgmBack(){
+  try{
+    if (!bgmCutOn) return; bgmCutOn = false; bgm.volume = 0;
+    var p = bgm.play(); if (p && p.catch) p.catch(function(){});
+    var v = 0, iv = setInterval(function(){ v += .1; if (v >= 1){ v = 1; clearInterval(iv); } bgm.volume = v; }, 90);
+  }catch(e){}
+}
+function h4(){ return ("000" + Math.floor(Math.random() * 65536).toString(16)).slice(-4).toUpperCase(); }
+var PT = [], PIV = 0, panicOn = false;
+function later(ms, fn){ PT.push(setTimeout(fn, ms)); }
+function typeTo(el, text){
+  var i = 0;
+  (function n(){
+    if (!panicOn) return;
+    if (i < text.length){ var ch = text.charAt(i++); el.textContent += ch; if (ch !== " " && i % 2 === 0) sfxA("key", false); later(11, n); }
+    else el.textContent += "\n";
+  })();
+  return text.length * 11 + 170;
+}
+function runSteps(st, i){ if (!panicOn || i >= st.length) return; var w = st[i](); later(w || 0, function(){ runSteps(st, i + 1); }); }
+function endPanic(){
+  panicOn = false; PT.forEach(clearTimeout); PT = []; clearInterval(PIV);
+  var crt = $("crt"); crt.className = "crt-on";
+  H.classList.remove("crash", "rgb"); $("crash").classList.remove("hot");
+  sfxIf("powerup"); bgmBack();
+  setTimeout(function(){ crt.className = ""; evBusy = false; }, 760);
+}
+function skipPanic(){
+  if (!panicOn) return;
+  panicOn = false; PT.forEach(clearTimeout); PT = []; clearInterval(PIV);
+  $("crt").className = "crt-black"; sfxIf("down");
+  setTimeout(function(){ panicOn = true; endPanic(); }, 160);
+}
+
 var EV = {
   panic: function(){
-    var tx = $("cTxt"), i = 0, ln = ["!! KERNEL PANIC !!", "0x0000007B  SYSTEM_THREAD_EXCEPTION", "dumping memory ........ 37%", "rebooting in 3..", "rebooting in 2..", "[ OK ] system restored"];
-    tx.textContent = ""; H.classList.add("crash"); sfxIf("freeze");
-    (function nx(){
-      if (i < ln.length){ tx.textContent += ln[i++] + "\n"; if (i === 3) sfxIf("glitch"); setTimeout(nx, i < 3 ? 260 : 340); }
-      else setTimeout(function(){ H.classList.remove("crash"); sfxIf("up"); evBusy = false; }, 700);
-    })();
+    var tx = $("cTxt"), fill = $("cFill"), pct = $("cPct"), crt = $("crt");
+    panicOn = true; PT = []; tx.textContent = ""; fill.style.width = "0%"; pct.textContent = "0%";
+    bgmCut(); H.classList.add("rgb"); sfxIf("stutter");
+    later(560, function(){ H.classList.remove("rgb"); crt.className = "crt-off"; sfxIf("down"); });
+    later(1180, function(){ H.classList.add("crash"); crt.className = "crt-on"; sfxA("tick"); sfxA("beep", 180, .2); });
+    later(1700, function(){
+      crt.className = "";
+      var st = [
+        function(){ $("crash").classList.add("hot"); sfxIf("alarm"); return 340; },
+        function(){ return typeTo(tx, "FATAL  lutfullo.sys  0x0000007B"); },
+        function(){ return typeTo(tx, "SYSTEM_THREAD_EXCEPTION_NOT_HANDLED"); },
+        function(){ return typeTo(tx, "  at nanogram.render()  +0x" + h4()); },
+        function(){ return typeTo(tx, "  at edi.core.listen()  +0x" + h4()); },
+        function(){ sfxIf("glitch"); return typeTo(tx, "stack: " + h4() + " " + h4() + " " + h4() + " " + h4()); },
+        function(){
+          var w = typeTo(tx, "dumping physical memory ...");
+          later(w, function(){
+            var p = 0; PIV = setInterval(function(){
+              p += 2; fill.style.width = p + "%"; pct.textContent = p + "%"; if (p % 10 === 0) sfxA("tick");
+              if (p >= 100) clearInterval(PIV);
+            }, 34);
+          });
+          return w + 1900;
+        },
+        function(){ sfxA("beep", 700, .1); return typeTo(tx, "dump complete."); },
+        function(){ sfxA("beep", 880, .12); return typeTo(tx, "restarting in 3.."); },
+        function(){ sfxA("beep", 880, .12); return typeTo(tx, "restarting in 2.."); },
+        function(){ sfxA("beep", 880, .12); return typeTo(tx, "restarting in 1.."); },
+        function(){ sfxA("beep", 1320, .3); tx.textContent = ""; fill.style.width = "0%"; pct.textContent = ""; $("crash").classList.remove("hot"); return 260; },
+        function(){ return typeTo(tx, "LUTFULLO BIOS v2.6"); },
+        function(){ return typeTo(tx, "memory test ........ OK"); },
+        function(){ return typeTo(tx, "loading kernel ..... OK"); },
+        function(){ return typeTo(tx, "starting services .. OK"); },
+        function(){ crt.className = "crt-black"; return 260; },
+        function(){ endPanic(); return 0; }
+      ];
+      runSteps(st, 0);
+    });
   },
   freeze: function(){
-    H.classList.add("freeze"); sfxIf("freeze");
-    endEv(1500 + Math.random() * 900, function(){ H.classList.remove("freeze"); sfxIf("up"); });
+    var nM = $("nrM"), nS = $("nrS"), t0 = Date.now(), dur = 2500 + Math.random() * 1200;
+    bgmCut(); sfxIf("cut"); H.classList.add("freeze");
+    var iv = setInterval(function(){
+      var s = (Date.now() - t0) / 1000;
+      nS.textContent = "waiting for response \u00B7 " + s.toFixed(1) + "s";
+      nM.textContent = s < 1.4 ? "lutfullo.exe is not responding" : "trying to recover the process";
+    }, 100);
+    setTimeout(function(){
+      clearInterval(iv);
+      var f = $("flash"); f.className = ""; void f.offsetWidth; f.className = "go";
+      H.classList.remove("freeze"); sfxIf("glitch");
+      setTimeout(function(){ sfxIf("up"); }, 160);
+      bgmBack(); evBusy = false;
+    }, dur);
   },
   rgb: function(){
     H.classList.add("rgb"); sfxIf("glitch");
@@ -1093,7 +1325,9 @@ var EV = {
   }
 };
 var WT = ["rgb", "rgb", "scramble", "scramble", "intrusion", "intrusion", "freeze", "panic"];
-function fireEv(name){ if (evBusy || !EV[name]) return; evBusy = true; EV[name](); }
+function fireEv(name){ if (evBusy || !EV[name] || reduceMotion()) return; evBusy = true; EV[name](); }
+$("crash").addEventListener("click", skipPanic);
+document.addEventListener("keydown", function(e){ if (panicOn && (e.key === "Escape" || e.key === "Enter")) skipPanic(); });
 function evLoop(first){
   setTimeout(function(){
     var a = document.activeElement, typing = a && (a.tagName === "INPUT" || a.tagName === "TEXTAREA");
