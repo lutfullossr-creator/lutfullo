@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://lutfullo.pages.dev/sitemap.xml
